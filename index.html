@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+        <link href="/data/favicon.ico" rel="icon" type="image/x-icon"/>
+        <title>Delaware Water Gap</title>
+        <meta name="viewport" content="width=device-width">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    
+        <h1>Welcome to the Delaware Water Gap National Recreation Area</h1>
+
+    
+        <!-- Add your site or application content here -->
+        
+        <!--put your external stylesheet links here-->
+    
+        
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+        <link rel="stylesheet" href="http://libs.cartocdn.com/cartodb.js/v3/3.15/themes/css/cartodb.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.draw/0.4.2/leaflet.draw.css"/>
+        <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css">        
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.min.css" rel="stylesheet" />
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="https://domoritz.github.io/leaflet-locatecontrol/dist/L.Control.Locate.min.css" />
+		<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-easybutton@2/src/easy-button.css">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+		<link rel="stylesheet" href="css/main.css">
+        <!--<script type="text/javascript" src="js/leaflet-search.min.js"></script>
+        <link rel="stylesheet" href="css/leaflet-search.min.css">
+	
+		<!--[if IE<9]>
+				<link rel="stylesheet" href="css/style.ie.css">
+			<![endif]-->
+	
+    </head>
+
+    <body>
+        
+        <div id="map"></div>
+        
+        <!--<div onload="controlSearch()"></div>-->
+                
+        <div id="feedback">
+            <center>
+            <label>Recommend Sites!</label></br>
+            <input type="button" onclick="startEdits()" value="Start Entry">
+            <input type="button" onclick="stopEdits()" value="Stop Entry">
+            </center>
+        </div>
+        
+        <div id="layers" title="Layers">
+            <center>
+            <label>Select Layers</label></br>
+            </center>
+			<input type="checkbox" name="filter" value="poi" checked> Points of Interest</input></br>
+			<input type="checkbox" name="filter" value="boundary" checked> Park Boundary</input></br>
+			<input type="checkbox" name="filter" value="camps" checked> Campsites</input></br>
+			<input type="checkbox" name="filter" value="access" checked> Access</input></br>
+			<input type="checkbox" name="filter" value="trail"> Trailheads</input></br>
+			<input type="checkbox" name="filter" value="data"> Guest input!</input>
+		</div>
+        <div id="queries" title="Filter Features">
+            <center>
+            <label>Filter Features</label></br>
+            </center>
+            <input type="radio" name="filter" value="permit"> Permit Required</input></br>
+			<input type="radio" name="filter" value="fee"> User Fee</input></br>
+			<input type="radio" name="filter" value="picnic"> Picnic Area</input></br>
+			<input type="radio" name="filter" value="ramp"> Boat Ramp</input>
+        </div>
+
+        
+        <div id="dialog" title="Provide Feedback!">
+            <form>
+                <fieldset>
+                    <label for="username">Name</label>
+                    <input type="text" name="username" id="username" placeholder="Enter your Name" class="text ui-widget-content ui-corner-all">
+                    <label for="description">Tell us about this Point</label>
+                    <input type="text" name="description" id="description" placeholder="Description for this point" class="text ui-widget-content ui-corner-all">
+                    <input type="submit" tabindex="-1" style="position:absolute; top:-1000px">
+                </fieldset>
+            </form>
+        </div>
+        
+        <script src="http://libs.cartocdn.com/cartodb.js/v3/3.15/cartodb.js"></script>        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.draw/0.4.2/leaflet.draw.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js"></script>
+        <script src="https://domoritz.github.io/leaflet-locatecontrol/dist/L.Control.Locate.min.js" charset="utf-8"></script>
+        <script src="https://cdn.jsdelivr.net/npm/leaflet-easybutton@2/src/easy-button.js"></script>
+        <script src="js/main.js"></script>
+	</body>
+</html>
